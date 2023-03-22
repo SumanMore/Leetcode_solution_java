@@ -1,3 +1,29 @@
+
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+       ListNode temp=head;
+       ArrayList<Integer> ob=new ArrayList<Integer>();
+       while(temp!=null)
+       {
+           ob.add(temp.val);
+           temp=temp.next;
+       }
+    int i=0,j=ob.size()-1;
+    while(i<j)
+    {
+        if((int)ob.get(i)!= (int)ob.get(j))
+        {
+            return false;
+        }
+            i++;
+            j--;
+        
+    }
+    return true;
+    }
+}
+
+
 corect solution but not an optimal one.
 class Solution {
     public boolean isPalindrome(String s) {
